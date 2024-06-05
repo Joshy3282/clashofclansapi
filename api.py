@@ -118,3 +118,32 @@ class COCApi:
     def get_war_leagues(self, params=None):
         return self.get(f"/warleagues", params)
 
+    def get_location_clan_rankings(self, locationId, params=None):
+        return self.get(f"/locations/{locationId}/rankings/clans", params)
+
+    def get_location_player_rankings(self, locationId, params=None):
+        return self.get(f"/locations/{locationId}/rankings/players", params)
+
+    def get_location_player_builder_base_rankings(self, locationId, params=None):
+        return self.get(f"/locations/{locationId}/rankings/players-builder-base", params)
+
+    def get_location_clan_builder_base_rankings(self, locationId, params=None):
+        return self.get(f"/locations/{locationId}/rankings/clans-builder-base", params)
+
+    def get_locations(self, params=None):
+        return self.get(f"/locations", params)
+
+    def get_locations_capital_rankings(self, locationId, params=None):
+        return self.get(f"/locations/{locationId}/rankings/capitals", params)
+
+    def get_location(self, locationId):
+        return self.get(f"/locations/{locationId}")
+
+    def get_goldpass_season(self):
+        return self.get("/goldpass/seasons/current")
+
+    def get_player_labels(self, params=None):
+        return self.get("/labels/players", params)
+
+    def get_clan_labels(self, params=None):
+        return self.get('/labels/clans', params)
